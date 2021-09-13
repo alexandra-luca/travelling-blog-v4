@@ -1,0 +1,21 @@
+<article>
+    <h2 class="title title--details">{{article.title}}</h2>
+    <ul class="info__container info__container--details">
+        <li class="info__item">{{article.tag}}</li>
+        <li class="info__item">Added by
+            <span class="info__mark">{{article.author}}</span>
+        </li>
+        <li class="info__item">{{article.date}}</li>
+    </ul>
+
+    <img src="assets/{{article.imgUrl}}" alt="">
+    <div class="content__container">
+        <p class="saying">{{article.saying}}</p>
+        <p>{{article.content}}</p>
+    </div>
+</article>
+
+<footer class="footer">
+    <button class="footer__link" *ngIf="prevArticleId !== 0" routerLink="/details/{{prevArticleId}}">previous article</button>
+    <button class="footer__link footer__link--next" *ngIf="nextArticleId !== 0" routerLink="/details/{{nextArticleId}}">next article</button>
+</footer>

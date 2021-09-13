@@ -1,0 +1,24 @@
+<article>
+    <h2 class="title">{{article.title}}</h2>
+    <ul class="info__container">
+        <li class="info__item">{{article.tag}}</li>
+        <li class="info__item">Added by
+            <span class="info__mark">{{article.author}}</span>
+        </li>
+        <li class="info__item">{{article.date}}</li>
+    </ul>
+    <div class="actions__container">
+        <button type="button" class="actions__btn" (click)="editArticle()">Edit</button>
+        <button type="button" class="actions__btn">Delete</button>
+    </div>
+
+    <img src="assets/{{article.imgUrl}}" alt="" />
+    <div class="content__container">
+        <p>{{article.content}}</p>
+    </div>
+    <div class="readmore__container">
+        <a href="/details/{{article.id}}" class="nav__link">
+            <button type="button" class="button">Read More</button>
+        </a>
+    </div>
+</article>

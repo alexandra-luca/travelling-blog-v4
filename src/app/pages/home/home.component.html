@@ -1,0 +1,13 @@
+<div id="home">
+    <app-add (newAddEvent)="openModal()"></app-add>
+    <div *ngFor="let article of displayArticles">
+        <app-article [article]="article"></app-article>
+    </div>
+    <app-footer
+        (newGotoEvent)="setStartDisplayIndex($event)" 
+        [numberOfArticles]="3" 
+        [startDisplayIndex]="startIndex" 
+        [articlesLength]="allArticlesLength">
+    </app-footer>
+    <app-modal></app-modal>
+</div>
